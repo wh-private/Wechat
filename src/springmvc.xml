@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context   
+            http://www.springframework.org/schema/context/spring-context.xsd  
+            http://www.springframework.org/schema/mvc  
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+            http://www.springframework.org/schema/util  
+            http://www.springframework.org/schema/util/spring-util.xsd">
+
+	
+	<mvc:annotation-driven></mvc:annotation-driven>
+ 
+	<context:component-scan base-package="com.neuedu.controller"></context:component-scan>
+   
+   	<!-- 拦截静态 -->
+	<mvc:default-servlet-handler/>
+	<!-- 支持文件上传 -->
+	  <!-- 配置文件上传的解析器 -->
+         <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+           <!-- 设置上传文件的最大尺寸为5MB -->
+         <!-- maxUploadSize是已有的属性,setting注入 -->
+         <property name="maxUploadSize"> 
+         <!-- value可以放property当属性,也可以单独拿出来当子元素,效果一样  -->
+         <!-- 不支持乘除,算好了放进来 -->
+         <value>5242880</value>
+          </property>
+         </bean> 
+</beans>

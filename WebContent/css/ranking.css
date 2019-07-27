@@ -1,0 +1,29 @@
+
+#div1_1{
+	width: 100%;
+	height: 80px;
+	background-color: #CCCCCC;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.div1_11>img{
+width: 50px;
+height: 50px;
+border-radius: 50px;
+		
+}
+.div1_12{
+	width: 65%;
+	display: flex;
+	justify-content: center;
+}
+.div1_11{
+	width: 20%;
+}
+.div1_13{
+	width: 10%;
+	float: right;
+}
+
+
